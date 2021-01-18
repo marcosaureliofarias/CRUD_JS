@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh Crud! things I Forgot To-Do</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="title">
+        <h1>Meu Primeiro Crud!</h1>
+        <p>Coisas Que esqueci de Fazer:</p>
+    </div>
+    <div class="form">
+        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                <input type="text" id="add-todo" placeholder="Coisas Para Fazer">
+                <input type="submit" value="Adicionar" class="btn btn-primary">
+        </form>
+        <p>Você Tem:</p>
+        <p id="counter"></p>
+        <table>
+            <tr class="to-do">
+                <th><h3>Faça:</h3></th>
+            </tr>
+            <tbody id="tasks">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="edit-box" role="arian-hidden">
+            <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-todo">
+                <input type="submit" value="Save" class="btn btn-success">
+                <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+            </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
